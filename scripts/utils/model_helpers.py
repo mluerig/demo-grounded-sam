@@ -24,14 +24,14 @@ import cv2
 from phenopype.core.segmentation import detect_contour
 
 #%% functions
-def filter_mask(image, mask, min_area, ret_area=False):    
+def filter_mask(image, mask):    
 
         ## convert to binary mask
         mask = mask.astype(np.uint8) * 255
 
         ## detect all contours above threshold
         with redirect_stdout(StringIO()):
-            annotations = detect_contour(mask, min_area=min_area, stats_mode="circle")
+            annotations = detect_contour(mask, stats_mode="circle")
         countour_coords = annotations["contour"]["a"]["data"]["contour"]
         contour_info = annotations["contour"]["a"]["data"]["support"]
 

@@ -2,8 +2,8 @@
 
 This is a minimal starter repo to use the Grounded Segment Anything Model (GroundedSAM) for image segmentation via text-based input.
 
-- [GroundedSAM repo](https://github.com/IDEA-Research/Grounded-Segment-Anything)
-- [Autodistill repo](https://github.com/autodistill/autodistill-grounded-sam)
+- Original implementation of the method (Grounding DINO + SAM) [GroundedSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything)
+- Easy and clean installation via [Autodistill](https://github.com/autodistill/autodistill-grounded-sam)
 
 ![SAM3 Animation](sam3-animation.gif)
 (Note: this animation shows the SAM3 web interface, but the principle is the same)
@@ -24,6 +24,11 @@ git clone https://github.com/mluerig/demo-grounded-sam
 
 ```powershell
 mamba env create -f environment.yml -n grounded-sam1
+```
+
+Then activate it:
+
+```powershell
 mamba activate grounded-sam1
 ```
 
